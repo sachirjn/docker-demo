@@ -1,0 +1,17 @@
+version: '3.2'
+services:
+  randomimageurl:
+    image: sachirjn/random-image-url:latest
+    container_name: docker.demo.randomimageurl
+    environment:
+      - myvariable=itsvalue
+    ports:
+      - 1063:6110
+  main:
+    image: sachirjn/docker-demo:latest
+    container_name: docker.demo.main
+    command: npm start
+    depends_on:
+      - randomimageurl
+    ports:
+      - 3000:9110
