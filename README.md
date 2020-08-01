@@ -1,6 +1,8 @@
 # A simple demo on Docker
 
-- Docker File
-- Docker Image
-- Docker Run
+- Docker Images & Docker File
+- Docker Container
 - Docker Network
+- Docker Compose
+
+Requires @https://github.com/sachirjn/random-image-url
