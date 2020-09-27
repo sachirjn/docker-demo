@@ -8,6 +8,6 @@ COPY ./package-lock.json /srv/node/package-lock.json
 
 RUN npm i
 
-EXPOSE 9110
+EXPOSE 30100
 
 CMD npm start
