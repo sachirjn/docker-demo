@@ -1,15 +1,15 @@
 const http = require('http');
 const fetch = require('node-fetch');
-var sunTzu = require('sun-tzu-quotes')
+var sunTzu = require('sun-tzu-quotes');
 
 const hostname = '0.0.0.0';
-const port = 9110;
+const port = 30100;
 
 let imageUrl = '';
-async function setImageUrl(){
-    const response = await fetch('http://docker.demo.randomimageurl:6110/');
-    const result = await response.text();
-    imageUrl = result;
+async function setImageUrl() {
+  const response = await fetch(process.env.RANDOM_IMAGE_URL);
+  const result = await response.text();
+  imageUrl = result;
 }
 setImageUrl();
 
